@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/spy game/spy.unity
+  isLoaded: 1
+  isActive: 1
