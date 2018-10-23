@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/spy game/spy.unity
     guid: 7ab3883dc995ce3408ace0e20d3bc534
+  - enabled: 1
+    path: Assets/Takahiro/Scenes/title.unity
+    guid: b3cb5b29ccd204748b5012069d5fe3af

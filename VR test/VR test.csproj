@@ -339,6 +339,10 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+    <Compile Include="Assets\Takahiro\Scripts\cameraPrefubInstancer.cs" />
+    <Compile Include="Assets\Takahiro\Scripts\sceneManager.cs" />
+    <Compile Include="Assets\Takahiro\Scripts\sceneManagerInstancer.cs" />
+    <Compile Include="Assets\Takahiro\Scripts\titleEnd.cs" />
     <Compile Include="Assets\torch\scene\script\TorchSlider.cs" />
     <Compile Include="Assets\torch\scene\script\Torchslider2.cs" />
     <Compile Include="Assets\torch\scripts\Torchelight.cs" />
