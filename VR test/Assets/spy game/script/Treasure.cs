@@ -7,7 +7,7 @@ public class Treasure : MonoBehaviour {
     public GameObject ControllerRightObj;
     Hand ControllerLeftHand;
     Hand ControllerRightHand;
-    public GameObject GameOverText;
+    public GameObject _warningText;
     Renderer rd;
     bool isDead;
 
@@ -21,15 +21,14 @@ public class Treasure : MonoBehaviour {
         ControllerLeftHand = ControllerLeftObj.GetComponent<Hand>();
         ControllerRightHand = ControllerRightObj.GetComponent<Hand>();
         rd = GetComponent<Renderer>();
-        GameOverText.SetActive(false);
         isDead = false;
         originalScale = transform.lossyScale;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        float distLeft = Vector3.Distance(transform.position, ControllerLeftObj.transform.position);
-        float distRight = Vector3.Distance(transform.position, ControllerRightObj.transform.position);
+        float distLeft = Vector3.Distance(transform.position, ControllerLeftObj.GetComponent<Hand>().HandPosition);
+        float distRight = Vector3.Distance(transform.position, ControllerRightObj.GetComponent<Hand>().HandPosition);
 
         //キャッチ範囲内の時
         bool isSmallerThanCatchDistL = distLeft < ControllerLeftHand.CATCH_DISTANCE;
@@ -51,7 +50,6 @@ public class Treasure : MonoBehaviour {
             rd.material = normalMAT;
         }
 
-        //GameOverText.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
@@ -61,7 +59,7 @@ public class Treasure : MonoBehaviour {
             if (ControllerLeftHand.IsGetTreasureFlag || ControllerRightHand.IsGetTreasureFlag)
             {
                 //TODO::ゲームオーバー
-                GameOverText.SetActive(true);
+                _warningText.GetComponent<WarningText>().ShowText();
                 isDead = true;
             }
         }
