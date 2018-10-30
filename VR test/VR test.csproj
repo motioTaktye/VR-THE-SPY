@@ -240,11 +240,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Common\Script\VR_Controller.cs" />
+    <Compile Include="Assets\spy game\otherMan\HandAnim.cs" />
     <Compile Include="Assets\spy game\script\GameFlow.cs" />
     <Compile Include="Assets\spy game\script\Hand.cs" />
     <Compile Include="Assets\spy game\script\Lazer.cs" />
     <Compile Include="Assets\spy game\script\Treasure.cs" />
-    <Compile Include="Assets\spy game\script\VR_Controller.cs" />
     <Compile Include="Assets\spy game\script\WarningText.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
